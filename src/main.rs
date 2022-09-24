@@ -48,7 +48,7 @@ fn main() {
     let trimmed = input_text.trim();
     match trimmed.parse::<u32>() {
         Ok(i) => russian_roulette(i),
-        Err(..) => println!("this was not an integer: {}", trimmed),
+        Err(..) => println!("Not an integer: {}", trimmed),
     };
     
 }
