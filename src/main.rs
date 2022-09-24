@@ -1,7 +1,6 @@
 use std::io::{stdin, stdout, Write};
 use rand::Rng;
 fn russian_roulette(barrel_count:u32) {
-    print!("\x1B[2J\x1B[1;1H");
     loop {
         let mut barrels:Vec<String>=vec![];
         for _x in 0..barrel_count {
@@ -38,7 +37,6 @@ fn russian_roulette(barrel_count:u32) {
         println!();
         let mut input = String::new();
         stdin().read_line(&mut input).unwrap();
-        print!("\x1B[2J\x1B[1;1H");
     }
 }
 fn main() {
