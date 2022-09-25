@@ -1,6 +1,8 @@
 use std::io::{stdin, stdout, Write};
 use rand::Rng;
+use clearscreen;
 fn russian_roulette(barrel_count:u32) {
+    clearscreen::clear().expect("failed to clear screen");
     loop {
         let mut barrels:Vec<String>=vec![];
         for _x in 0..barrel_count {
@@ -37,9 +39,11 @@ fn russian_roulette(barrel_count:u32) {
         println!();
         let mut input = String::new();
         stdin().read_line(&mut input).unwrap();
+        clearscreen::clear().expect("failed to clear screen");
     }
 }
 fn main() {
+    clearscreen::clear().expect("failed to clear screen");
     print!("Number of barrels: ");
     #[allow(unused_must_use)]{stdout().flush();};
     let mut input_text = String::new();
